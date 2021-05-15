@@ -1,11 +1,7 @@
-// import { Container } from './styles';
+import Routes from './routes';
 
 const App: React.FC = () => {
-  return (
-    <div>
-      <h1>Hello Gama</h1>
-    </div>
-  );
+  return <Routes />;
 };
 
 export default App;
