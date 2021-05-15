@@ -42,6 +42,7 @@ const Form: React.FC = () => {
           <label htmlFor="">Seu nome:</label>
           <input
             type="text"
+            disabled={isLoading}
             onChange={e => {
               setFormDataContent({
                 ...formDataContent,
@@ -54,6 +55,7 @@ const Form: React.FC = () => {
           <label htmlFor="">Username:</label>
           <input
             type="text"
+            disabled={isLoading}
             onChange={e => {
               setFormDataContent({
                 ...formDataContent,
@@ -66,6 +68,7 @@ const Form: React.FC = () => {
           <label htmlFor="">CPF:</label>
           <input
             type="text"
+            disabled={isLoading}
             onChange={e => {
               setFormDataContent({
                 ...formDataContent,
@@ -78,6 +81,7 @@ const Form: React.FC = () => {
           <label htmlFor="">Senha:</label>
           <input
             type="password"
+            disabled={isLoading}
             onChange={e => {
               setFormDataContent({
                 ...formDataContent,
@@ -87,7 +91,7 @@ const Form: React.FC = () => {
           />
         </div>
         
-        <button type="submit">{isLoading ? 'Criando conta...' : 'Enviar'}</button>
+        <button type="submit" disabled={isLoading}>{isLoading ? 'Criando conta...' : 'Enviar'}</button>
       </form>
     </CardContent>
   );
