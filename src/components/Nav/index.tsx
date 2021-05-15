@@ -1,17 +1,20 @@
 import { Link } from 'react-router-dom';
 
 import LogoAfya from '../../assets/img/logo.png';
+import { NavContent } from './styles';
 
 const Nav: React.FC = () => {
   return (
-    <nav>
-      <img src={LogoAfya} alt="Logo Afya" />
-      <div>
+    <NavContent>
+      <Link to="/">
+        <img src={LogoAfya} alt="Logo Afya" width="60" height="60" />
+      </Link>
+      <div className="nav-contents">
         <Link to="/">Home</Link>
         <Link to="/contact">Contact</Link>
       </div>
-    </nav>
-    );
-}
+    </NavContent>
+  );
+};
 
 export default Nav;
