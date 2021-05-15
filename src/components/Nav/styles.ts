@@ -7,7 +7,7 @@ export const NavContent = styled.nav`
   align-items: center;
   justify-content: space-around;
 
-  background-color: #d4165b;
+  background-color: #f70054;
 
   .nav-contents {
     a { 
