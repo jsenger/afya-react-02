@@ -23,7 +23,6 @@ const Form: React.FC = () => {
       e.preventDefault();
 
       setIsLoading(true);
-      console.log(formDataContent)
 
       api
         .post('usuarios', formDataContent)
