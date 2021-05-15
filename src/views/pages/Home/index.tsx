@@ -1,4 +1,5 @@
 import Nav from '../../../components/Nav';
+import Form from '../../../components/Form';
 import Footer from '../../../components/Footer';
 
 import { Container } from './styles';
@@ -10,17 +11,13 @@ const Home: React.FC = () => {
       <Container>
         <div>
           <section className="signup-section">
-            <div className="signup-text">
-              textos
-            </div>
+            <div className="signup-text">textos</div>
             <div className="signup-form">
-              formulário
+              <Form />
             </div>
           </section>
           <section className="cta-section">
-            <div>
-              CTA
-            </div>
+            <div>CTA</div>
           </section>
         </div>
       </Container>
