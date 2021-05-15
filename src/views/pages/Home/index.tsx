@@ -8,7 +8,21 @@ const Home: React.FC = () => {
     <>
       <Nav />
       <Container>
-        <h1>Home</h1>
+        <div>
+          <section className="signup-section">
+            <div className="signup-text">
+              textos
+            </div>
+            <div className="signup-form">
+              formulário
+            </div>
+          </section>
+          <section className="cta-section">
+            <div>
+              CTA
+            </div>
+          </section>
+        </div>
       </Container>
       <Footer />
     </>
