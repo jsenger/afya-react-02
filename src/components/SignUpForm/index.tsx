@@ -13,7 +13,7 @@ interface IFormPostData {
   senha?: string;
 }
 
-const Form: React.FC = () => {
+const SignUpForm: React.FC = () => {
   const [formDataContent, setFormDataContent] = useState<IFormPostData>(
     {} as IFormPostData
   );
@@ -105,4 +105,4 @@ const Form: React.FC = () => {
   );
 };
 
-export default Form;
+export default SignUpForm;
