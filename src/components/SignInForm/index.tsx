@@ -29,7 +29,10 @@ const SignInForm: React.FC = () => {
       api
         .post('login', formDataContent)
         .then(response => {
+          localStorage.setItem('@tokenAfyaApp', response.data.token);
+
           toast.success('Login realizado!');
+          
           history.push('/panel');
         })
         .catch(err => toast.error('Ops, algo deu errado.'))
