@@ -1,5 +1,7 @@
 import { useCallback, useState, FormEvent } from 'react';
+import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
+
 import api from '../../service/api';
 
 import { CardContent } from './styles';
@@ -18,6 +20,8 @@ const Form: React.FC = () => {
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  const history = useHistory();
+
   const postSignupData = useCallback(
     (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -26,11 +30,14 @@ const Form: React.FC = () => {
 
       api
         .post('usuarios', formDataContent)
-        .then(response => toast.success('Cadastro realizado com sucesso.'))
+        .then(response => {
+          toast.success('Cadastro realizado com sucesso.');
+          setTimeout(() => history.push('/login'), 1500);
+        })
         .catch(err => toast.error('Ops, falha no engano!'))
         .finally(() => setIsLoading(false));
     },
-    [formDataContent]
+    [formDataContent, history]
   );
 
   return (
@@ -89,8 +96,10 @@ const Form: React.FC = () => {
             }}
           />
         </div>
-        
-        <button type="submit" disabled={isLoading}>{isLoading ? 'Criando conta...' : 'Enviar'}</button>
+
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? 'Criando conta...' : 'Enviar'}
+        </button>
       </form>
     </CardContent>
   );
