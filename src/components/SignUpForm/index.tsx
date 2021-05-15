@@ -32,7 +32,7 @@ const SignUpForm: React.FC = () => {
         .post('usuarios', formDataContent)
         .then(response => {
           toast.success('Cadastro realizado com sucesso.');
-          setTimeout(() => history.push('/login'), 1500);
+          history.push('/login');
         })
         .catch(err => toast.error('Ops, falha no engano!'))
         .finally(() => setIsLoading(false));
