@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <p>Redes sociais</p>
         </div>
       </div>
-      <p>afya-react-2</p>
+      <p>© 2019 Afya Educacional</p>
     </footer>
   );
 };
