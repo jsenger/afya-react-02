@@ -11,7 +11,7 @@ const Nav: React.FC = () => {
       </Link>
       <div className="nav-contents">
         <Link to="/">Home</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to="/contact">Contato</Link>
       </div>
     </NavContent>
   );
