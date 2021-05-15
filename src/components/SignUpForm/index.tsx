@@ -49,12 +49,12 @@ const SignUpForm: React.FC = () => {
           <input
             type="text"
             disabled={isLoading}
-            onChange={e => {
+            onChange={e =>
               setFormDataContent({
                 ...formDataContent,
                 nome: e.target.value,
-              });
-            }}
+              })
+            }
           />
         </div>
         <div className="input-group">
@@ -62,12 +62,12 @@ const SignUpForm: React.FC = () => {
           <input
             type="text"
             disabled={isLoading}
-            onChange={e => {
+            onChange={e =>
               setFormDataContent({
                 ...formDataContent,
                 login: e.target.value,
-              });
-            }}
+              })
+            }
           />
         </div>
         <div className="input-group">
@@ -75,12 +75,12 @@ const SignUpForm: React.FC = () => {
           <input
             type="text"
             disabled={isLoading}
-            onChange={e => {
+            onChange={e =>
               setFormDataContent({
                 ...formDataContent,
                 cpf: e.target.value,
-              });
-            }}
+              })
+            }
           />
         </div>
         <div className="input-group">
@@ -88,12 +88,12 @@ const SignUpForm: React.FC = () => {
           <input
             type="password"
             disabled={isLoading}
-            onChange={e => {
+            onChange={e =>
               setFormDataContent({
                 ...formDataContent,
                 senha: e.target.value,
-              });
-            }}
+              })
+            }
           />
         </div>
 
