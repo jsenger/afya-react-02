@@ -6,4 +6,8 @@ export default createGlobalStyle`
     padding: 0;
     font-family: 'Roboto', sans-serif;
   }
+
+  footer { 
+    text-align: center;
+  }
 `
