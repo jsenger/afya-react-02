@@ -14,6 +14,10 @@ export const NavContent = styled.nav`
       text-decoration: none;
       color: #fff;
 
+      &:hover {
+        opacity: 0.9;
+      }
+
       &:not(:last-child) {
         margin-right: 1rem;
       }
